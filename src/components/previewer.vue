@@ -9,7 +9,7 @@
             <el-option label="Pixel 2" :value="5"></el-option>
             <el-option label="Pixel 2XL" :value="6"></el-option>
         </el-select>
-        <div :class="[phoneSize, 'block-border']" v-html="viewContent"></div>
+        <div :class="[phoneSize, 'block-border', 'phone-style']" v-html="viewContent"></div>
     </div>
 </template>
 
@@ -78,5 +78,14 @@
     .p2xl{
         width: 411px;
         height: 823px;
+    }
+    .phone-style{
+        overflow: auto;
+    }
+    /**
+        隐藏滚动条
+    */
+    ::-webkit-scrollbar {
+        display: none;
     }
 </style>
